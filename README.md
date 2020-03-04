@@ -9,7 +9,7 @@ This pipeline will update the `my-cluster` cluster and `my-service` service with
 ```yaml
   pipeline:
     deploy:
-      image: g-portugues/drone-ecs-deploy
+      image: gportugues/drone-ecs-deploy
       cluster: my-cluster
       service: my-service
       image_name: my-image:latest
@@ -21,7 +21,7 @@ Another example with optional variables
 ```yaml
   pipeline:
     deploy:
-      image: g-portugues/drone-ecs-deploy
+      image: gportugues/drone-ecs-deploy
       cluster: my-cluster
       service: my-service
       image_name: my-image:latest
