@@ -1,4 +1,4 @@
-# ECS deploy plugin for drone.io [https://hub.docker.com/r/joshdvir/drone-ecs-deploy/](https://hub.docker.com/r/joshdvir/drone-ecs-deploy/)
+# ECS deploy plugin for drone.io
 
 This plugin allows updating an ECS service.
 
@@ -9,7 +9,7 @@ This pipeline will update the `my-cluster` cluster and `my-service` service with
 ```yaml
   pipeline:
     deploy:
-      image: joshdvir/drone-ecs-deploy
+      image: g-portugues/drone-ecs-deploy
       cluster: my-cluster
       service: my-service
       image_name: my-image:latest
@@ -21,7 +21,7 @@ Another example with optional variables
 ```yaml
   pipeline:
     deploy:
-      image: joshdvir/drone-ecs-deploy
+      image: g-portugues/drone-ecs-deploy
       cluster: my-cluster
       service: my-service
       image_name: my-image:latest
@@ -31,6 +31,7 @@ Another example with optional variables
       min: "100" # defaults to 100
       aws_access_key_id: ewijdfmvbasciosvdfkl # optional, better to use as secret
       aws_secret_access_key: vdfklmnopenxasweiqokdvdfjeqwuioenajks # optional, better to use as secret
+      task_definition: {"taskDefinition":{"requiresCompatibilities": ["FARGATE", "EC2"]}}
 ```
 
 ## Optional secrets
