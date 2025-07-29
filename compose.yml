@@ -1,0 +1,9 @@
+services:
+  drone-ecs-deploy:
+    container_name: drone-ecs-deploy
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    
