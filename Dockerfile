@@ -1,16 +1,12 @@
-FROM alpine:3.5
+FROM alpine:3.22.1
 
 RUN apk add --update --no-cache \
     curl \
     jq \
     ca-certificates \
     bash \
-    python \
-    && python -m ensurepip \
-    && rm -r /usr/lib/python*/ensurepip \
-    && pip install --upgrade pip setuptools \
-    awscli --ignore-installed \
-    && rm -r /root/.cache
+    python3 \
+    aws-cli
 
 RUN curl https://raw.githubusercontent.com/silinternational/ecs-deploy/master/ecs-deploy -o /bin/ecs-deploy \
     && chmod +x /bin/ecs-deploy
