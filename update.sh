@@ -41,4 +41,4 @@ fi
 
 export TASK_DEFINITION=${PLUGIN_TASK_DEFINITION}
 
-ecs-deploy --region ${PLUGIN_AWS_REGION} --cluster ${PLUGIN_CLUSTER} --image ${PLUGIN_IMAGE_NAME} --service-name ${PLUGIN_SERVICE} --use-latest-task-def --timeout ${PLUGIN_TIMEOUT} --min ${PLUGIN_MIN} --max ${PLUGIN_MAX} ${PLUGIN_OPTIONS} --copy-task-definition-tags
+ecs-deploy --region ${PLUGIN_AWS_REGION} --cluster ${PLUGIN_CLUSTER} --image ${PLUGIN_IMAGE_NAME} --service-name ${PLUGIN_SERVICE} --use-latest-task-def --copy-task-definition-tags --timeout ${PLUGIN_TIMEOUT} --min ${PLUGIN_MIN} --max ${PLUGIN_MAX} ${PLUGIN_OPTIONS}
